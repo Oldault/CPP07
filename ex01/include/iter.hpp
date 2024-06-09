@@ -19,14 +19,32 @@
 #include <cstddef>
 #include <cctype>
 
+enum string_code {
+  INT,
+  FLOAT,
+  STRING,
+  ERRORS,
+  EXIT,
+  NONE
+};
+
 // ? Third Parameter functions
 void add_42(int& n);
 void subtract_42(float& n);
 void decrypt(std::string& text);
 
-// ? print
+// ? Prints
 template<typename T>
 void printElement(T& element);
+void printHeader( void );
+void printError( void );
+
+// ? Tests
+string_code hashit (const std::string& str);
+void  test_IntArray( void );
+void  test_FloatArray( void );
+void  test_stringArray( void );
+void  test_error( void );
 
 // ! Iter() itself
 template <typename T>

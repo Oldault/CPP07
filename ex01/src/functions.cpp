@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 12:08:55 by svolodin          #+#    #+#             */
-/*   Updated: 2024/06/09 12:42:42 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/06/09 14:57:08 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ void subtract_42(float& n)
 
 void decrypt(std::string& text)
 {
+  if (text.empty()) {
+    std::cerr << BOLD(BRED(" Problem with arguments ")) << std::endl;
+    return ;
+  }
   for (size_t i = 0; i < text.length(); ++i)
   {
     char& c = text[i];
