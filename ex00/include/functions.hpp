@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   functions.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oldault <oldault@student.42.fr>            +#+  +:+       +#+        */
+/*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 11:10:35 by oldault           #+#    #+#             */
-/*   Updated: 2024/06/09 11:19:36 by oldault          ###   ########.fr       */
+/*   Updated: 2024/06/09 11:32:13 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include "Colors.hpp"
 
 template <typename T>
 void swap(T& a, T& b);
