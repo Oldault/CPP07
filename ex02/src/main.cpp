@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 10:11:12 by svolodin          #+#    #+#             */
-/*   Updated: 2024/06/09 16:26:15 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/06/09 17:34:40 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,26 @@
 
 int main (void)
 {
-  Array<int> arr;
-  Array<int> arrWithSize(5);
+  std::string input;
 
-  arrWithSize.print();
-  std::cout << arrWithSize[2] << std::endl;
+  printHeader();
+  while (true)
+  {
+    if (std::cin.eof())
+      break ;
+    std::cout << FYEL(" > ");
+    std::getline(std::cin, input);
+    
+    switch(hashit(input))
+    {
+      case INT: test_IntArray(); break;
+      case FLOAT: test_FloatArray(); break;
+      case STRING: test_StringArray(); break;
+      case EXCEPTIONS: test_ExceptionHandling(); break;
+      case EXIT: return 0;
+      default: printError();
+    }
+  }
 
   return 0;
 }
