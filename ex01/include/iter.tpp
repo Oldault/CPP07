@@ -1,37 +1,30 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   iter.tpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/31 10:13:03 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/31 10:13:04 by svolodin         ###   ########.fr       */
+/*   Created: 2024/06/09 12:06:51 by svolodin          #+#    #+#             */
+/*   Updated: 2024/06/09 12:42:48 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __ITER_HPP__
-#define __ITER_HPP__
+#include "iter.hpp"
 
-#include <iostream>
-#include <string>
-#include <cstddef>
-#include <cctype>
-
-// ? Third Parameter functions
-void add_42(int& n);
-void subtract_42(float& n);
-void decrypt(std::string& text);
-
-// ? print
 template<typename T>
-void printElement(T& element);
+void printElement(T& element)
+{
+  std::cout << "\t" << element << std::endl;
+}
 
-// ! Iter() itself
 template <typename T>
-void  iter(T *adr, size_t len, void (*func)(T& element));
+void  iter(T *adr, size_t len, void (*func)(T& element))
+{
+  for (size_t i = 0; i < len; i++)
+  {
+    func(adr[i]);
+  }
 
-#include "iter.tpp"
-
-#endif // __ITER_HPP__
+  return ;
+}
