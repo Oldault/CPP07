@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 15:00:47 by svolodin          #+#    #+#             */
-/*   Updated: 2024/06/09 15:01:01 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/06/09 17:31:51 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void printError( void )
   std::cerr <<
     "\n\t" <<
     BOLD(BRED(" Invalid input. Try: ")) <<
-    ITAL(BRED("\'INT\', \'FLOAT\', \'STRING\' or \'ERRORS\' "))
+    ITAL(BRED("\'INT\', \'FLOAT\', \'STRING\' or \'EXCEPTIONS\' "))
   << std::endl << std::endl;
 }
 
@@ -31,6 +31,6 @@ void printHeader( void )
     "\t" << ITAL(FYEL("INT")) <<
     "\t" << ITAL(FRED("FLOAT")) <<
     "\t" << ITAL(FBLU("STRING")) <<
-    "\t" << ITAL(FMAG("ERRORS"))
+    "\t" << ITAL(FMAG("EXCEPTIONS"))
   << std::endl << std::endl;
 }

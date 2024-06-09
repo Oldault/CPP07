@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 15:01:57 by svolodin          #+#    #+#             */
-/*   Updated: 2024/06/09 15:02:40 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/06/09 17:33:23 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ string_code hashit (const std::string& str)
   if (str == "INT") return INT;
   if (str == "FLOAT") return FLOAT;
   if (str == "STRING") return STRING;
-  if (str == "ERRORS") return ERRORS;
+  if (str == "EXCEPTIONS") return EXCEPTIONS;
   if (str == "EXIT") return EXIT;
   return NONE;
 }
@@ -62,7 +62,7 @@ void  test_FloatArray( void )
   std::cout << RST << "\n\n";
 }
 
-void  test_stringArray( void )
+void  test_StringArray( void )
 {
   std::string rot13nd[4] = {"V", "ernyyl", "yvxr", "fneqvarf"};
   size_t rot13ndLen = sizeof(rot13nd) / sizeof(rot13nd[0]);
@@ -82,7 +82,7 @@ void  test_stringArray( void )
   std::cout << RST << "\n\n";
 }
 
-void  test_error( void )
+void  test_Exception( void )
 {
   std::string err[42] = {""};
   {

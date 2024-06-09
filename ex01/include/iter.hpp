@@ -14,16 +14,18 @@
 #ifndef __ITER_HPP__
 #define __ITER_HPP__
 
+#include "Colors.hpp"
 #include <iostream>
 #include <string>
 #include <cstddef>
 #include <cctype>
 
+// ? Test Types
 enum string_code {
   INT,
   FLOAT,
   STRING,
-  ERRORS,
+  EXCEPTIONS,
   EXIT,
   NONE
 };
@@ -43,8 +45,8 @@ void printError( void );
 string_code hashit (const std::string& str);
 void  test_IntArray( void );
 void  test_FloatArray( void );
-void  test_stringArray( void );
-void  test_error( void );
+void  test_StringArray( void );
+void  test_Exception( void );
 
 // ! Iter() itself
 template <typename T>

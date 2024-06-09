@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 10:11:12 by svolodin          #+#    #+#             */
-/*   Updated: 2024/06/09 15:02:35 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/06/09 17:33:38 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int main (void)
     {
       case INT: test_IntArray(); break;
       case FLOAT: test_FloatArray(); break;
-      case STRING: test_stringArray(); break;
-      case ERRORS: test_error(); break;
+      case STRING: test_StringArray(); break;
+      case EXCEPTIONS: test_Exception(); break;
       case EXIT: return 0;
       default: printError();
     }
